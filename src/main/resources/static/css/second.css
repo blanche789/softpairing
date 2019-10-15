@@ -1,0 +1,139 @@
+#subject .chart {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#subject .manifest {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+#subject .manifest tr {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#subject .manifest tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+#subject .manifest th {
+  color: #fff;
+  background-color: #0080ff;
+  padding: 8px 8px;
+  font-weight: bold;
+}
+
+#subject .manifest td {
+  padding: 8px 8px;
+}
+
+#subject .manifest .twice {
+  border: none;
+}
+
+#subject .manifest .twice th {
+  background-color: #fff;
+  color: #000;
+}
+
+#answer .chart {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#answer .manifest {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+#answer .manifest tr {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#answer .manifest tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+#answer .manifest th {
+  color: #fff;
+  background-color: #0080ff;
+  padding: 8px 8px;
+  font-weight: bold;
+}
+
+#answer .manifest td {
+  padding: 8px 8px;
+}
+
+#answer .manifest .twice {
+  border: none;
+}
+
+#answer .manifest .twice th {
+  background-color: #fff;
+  color: #000;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  border-top: 1px solid #ccc;
+  width: 98vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+footer > div.active {
+  background-color: #0080ff;
+  -webkit-box-shadow: 0px 8px 48px 0px rgba(255, 212, 0, 0.4);
+          box-shadow: 0px 8px 48px 0px rgba(255, 212, 0, 0.4);
+  color: black;
+}
+
+footer span {
+  display: block;
+  margin-top: 5px;
+}
+
+footer .subject {
+  background: url("../imge/subject.png") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 10px;
+}
+
+footer .answer {
+  background: url("../imge/answer.png") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 10px;
+}
+
+footer .function {
+  background: url("../imge/function.png") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=second.css.map */

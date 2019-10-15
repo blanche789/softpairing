@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+<body>
+  hello world
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    var allData = {
+      questionNum:10,
+      numericalRange:20
+    };
+
+    $.ajax({
+      url: '/generate',
+      type: 'POST',
+      contentType:"application/json",
+      dataType: "json",
+      data: JSON.stringify(allData),
+    })
+    .done(function(res) {
+      console.log(res[0])
+      console.log(res[0].answer)
+      console.log(res[0].exercise)
+      console.log(res[0].qid)
+      console.log("done")
+    })
+    .fail(function(err) {
+      console.log("出错了")
+    })
+    .always(function() {
+      console.log("end...")
+    })
+  </script>
+</body>
+</html>
