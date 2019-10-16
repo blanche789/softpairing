@@ -7,22 +7,140 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>四则运算</title>
     <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./css/second.css"> -->
 </head>
 
 <body>
-    <div class="content">
-        <div class="txt">
-            <p class="title"> 自动生成小学四则运算题目 </p>
-            <p class="subTitle"> 请输入你的指令</p>
-        </div>
-        <div class="operate">
-            <input type="text" placeholder="请输入你的指令">
-            <!-- <a href="./second.html" class="search">确定</a>
-             -->
-            <a href="#" class="search">确定</a>
-
-        </div>
+<div class="content">
+    <div class="txt">
+        <p class="title"> 自动生成小学四则运算题目 </p>
+        <p class="subTitle"> 请输入你的指令:格式为(10,10) 第一个参数意思是题目数量、第二个参数意思是操作数范围</p>
     </div>
+    <div class="operate">
+        <input type="text" placeholder="请输入你的指令">
+        <a href="#" class="search">确定</a>
+
+        <!-- <a href="#" class="search">确定</a> -->
+
+    </div>
+</div>
+<div class="second hide">
+    <main>
+        <section id="subject">
+            <div class="chart">
+                <table class="manifest">
+                    <tbody>
+                    <tr>
+                        <th>题号</th>
+                        <th>题目</th>
+                        <th>我的答案</th>
+                        <th>正误</th>
+                    </tr>
+<!--                    <tr>-->
+<!--                        <td>1</td>-->
+<!--                        <td>1+2+3</td>-->
+<!--                        <td>-->
+<!--                            <input type="text">-->
+<!--                        </td>-->
+<!--                        <td class="check_answer">true</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>2</td>-->
+<!--                        <td>2*3+4</td>-->
+<!--                        <td>-->
+<!--                            <input type="text">-->
+<!--                        </td>-->
+<!--                        <td class="check_answer">false</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>3</td>-->
+<!--                        <td>3*4+4</td>-->
+<!--                        <td>-->
+<!--                            <input type="text">-->
+<!--                        </td>-->
+<!--                        <td class="check_answer"> false</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>4</td>-->
+<!--                        <td>5*5+5</td>-->
+<!--                        <td>-->
+<!--                            <input type="text">-->
+<!--                        </td>-->
+<!--                        <td class="check_answer">true</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>5</td>-->
+<!--                        <td>2+2+4</td>-->
+<!--                        <td>-->
+<!--                            <input type="text">-->
+<!--                        </td>-->
+<!--                        <td class="check_answer">false</td>-->
+<!--                    </tr>-->
+                    </tbody>
+                </table>
+                <a href="#" class="check">Check</a>
+            </div>
+        </section>
+        <section id='answer' style="display: none;">
+            <div class="chart">
+                <table class="manifest">
+                    <tbody>
+                    <tr>
+                        <th>题号</th>
+                        <th>题目</th>
+                        <th>我的答案</th>
+                    </tr>
+<!--                    <tr>-->
+<!--                        <td>1</td>-->
+<!--                        <td>1+2+3</td>-->
+<!--                        <td class="answer">1</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>2</td>-->
+<!--                        <td>2*3+4</td>-->
+<!--                        <td class="answer">2</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>3</td>-->
+<!--                        <td>3*4+4</td>-->
+<!--                        <td class="answer">3</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>4</td>-->
+<!--                        <td>5*5+5</td>-->
+<!--                        <td class="answer">4</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>5</td>-->
+<!--                        <td>2+2+4</td>-->
+<!--                        <td class="answer">5</td>-->
+<!--                    </tr>-->
+                    </tbody>
+                </table>
+        </section>
+        <section id='function' style="display: none;">
+            <a href="#" class="download file">download file</a>
+            <a href="#" class="download answer">download answer</a>
+        </section>
+    </main>
+    <footer>
+        <div class='active'>
+            <div class="subject">
+
+            </div>
+            <span>题目</span>
+        </div>
+        <div>
+            <div class="answer"></div>
+            <span>答案</span>
+        </div>
+        <div>
+            <div class="function"></div>
+            <span>更多功能</span>
+        </div>
+    </footer>
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./js/index.js"></script>

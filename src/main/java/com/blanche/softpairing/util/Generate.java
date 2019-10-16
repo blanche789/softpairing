@@ -15,16 +15,16 @@ public class Generate {
     Auxiliary auxiliary = new Auxiliary();
     Calculator calculator = new Calculator();
 
-    public Exercise generateInterger(int qid, int numRange) {
+    public Exercise generateInterger(int qid, int numRange) {//生成整数的题目
         Random random = new Random();
         Exercise exercise = new Exercise();
-        int operatorNum = random.nextInt(3) + 1;
-        int[] operatorIndex = auxiliary.indexArray(operatorNum , 4);
+        int operatorNum = random.nextInt(3) + 1; //随机生成操作符数量
+        int[] operatorIndex = auxiliary.indexArray(operatorNum , 4); //根据操作符数量生成相应的随机索引
         int[] operands = new int[operatorNum + 1];
-        for (int i = 0; i < operands.length; i++) {
+        for (int i = 0; i < operands.length; i++) { //生成操作数
             operands[i] = random.nextInt(numRange);
         }
-        String formula = auxiliary.splicingFormula(operatorIndex, operands, operatorNum);
+        String formula = auxiliary.splicingFormula(operatorIndex, operands, operatorNum);  //拼接符号和题目
 
         //计算出答案
         int answer = calculator.caculate(formula);
@@ -39,7 +39,7 @@ public class Generate {
         return exercise;
     }
 
-    public Exercise generateFraction(int qid,int numRange) {
+    public Exercise generateFraction(int qid,int numRange) {//生成含分数的题目
         Random random = new Random();
         Exercise exercise = new Exercise();
         int operatorNum = random.nextInt(2) + 1;
@@ -54,8 +54,8 @@ public class Generate {
         for (int i = 0; i < operatorNum; i++) {
             //生成下个个分数
             int[] nextFraction = auxiliary.primeNumber(numRange);
-            int nextx = nextFraction[0];
-            int nexty = nextFraction[1];
+            int nextx = nextFraction[0]; //分子
+            int nexty = nextFraction[1]; //分母
 
             if (operatorArr[operatorIndex[i]].equals("+")) {
                 x = x * nexty + nextx * y;
@@ -67,7 +67,7 @@ public class Generate {
                     nextFraction = auxiliary.primeNumber(numRange);
                     nextx = nextFraction[0];
                     nexty = nextFraction[1];
-                    if (count == 5) {
+                    if (count == 5) { //若出现了五次生成的题目相减为负数则利用上个数来进行生成下一个书
                         nextx = x - 1;
                         nexty = y;
                     }

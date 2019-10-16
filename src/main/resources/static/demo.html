@@ -12,31 +12,48 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
-    var allData = {
-      questionNum:10,
-      numericalRange:20
-    };
+    // var allData = {
+    //   questionNum:10,
+    //   numericalRange:20
+    // };
+    //
+    // $.ajax({
+    //   url: '/generate',
+    //   type: 'POST',
+    //   contentType:"application/json",
+    //   dataType: "json",
+    //   data: JSON.stringify(allData),
+    // })
+    // .done(function(res) {
+    //   console.log(res[0])
+    //   console.log(res[0].answer)
+    //   console.log(res[0].exercise)
+    //   console.log(res[0].qid)
+    //   console.log("done")
+    // })
+    // .fail(function(err) {
+    //   console.log("出错了")
+    // })
+    // .always(function() {
+    //   console.log("end...")
+    // })
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST', "/download", true)
+    xhr.responseType = 'blob'
 
-    $.ajax({
-      url: '/generate',
-      type: 'POST',
-      contentType:"application/json",
-      dataType: "json",
-      data: JSON.stringify(allData),
-    })
-    .done(function(res) {
-      console.log(res[0])
-      console.log(res[0].answer)
-      console.log(res[0].exercise)
-      console.log(res[0].qid)
-      console.log("done")
-    })
-    .fail(function(err) {
-      console.log("出错了")
-    })
-    .always(function() {
-      console.log("end...")
-    })
+    xhr.onload = function() {
+      if (this.status === 200) {
+        var responseHeaders = xhr.getAllResponseHeaders().toLowerCase();
+        var fileName = responseHeaders.match(/\w+.txt/g)
+        var blob = this.response
+        var a = document.createElement('a')
+        a.download = `${fileName}`
+        a.href = window.URL.createObjectURL(blob)
+        a.click()
+      }
+    }
+    xhr.send("kind=1")//下载问题 下载答案的时候把kind改成0
+
   </script>
 </body>
 </html>

@@ -15,6 +15,7 @@ public class Calculator {
     public int caculate(String formula) {
         Auxiliary auxiliary = new Auxiliary();
         Map<String, Integer> map = new HashMap<>();
+        //设置操作符优先级
         map.put("(", 0);
         map.put("+", 1);
         map.put("-", 1);
@@ -61,7 +62,7 @@ public class Calculator {
                         }
                         break;
                     case '=':
-                        while (!operatorStack.isEmpty()) {
+                        while (!operatorStack.isEmpty()) {//若操作符栈不为空
                             while (!operatorStack.isEmpty()) {
                                 operator = operatorStack.pop();
                                 int a = integerStack.pop();
@@ -75,9 +76,9 @@ public class Calculator {
                         }
                         break;
                     default:
-                        while (!operatorStack.isEmpty()) {
+                        while (!operatorStack.isEmpty()) { //将操作符入栈
                             operator = operatorStack.pop();
-                            if (map.get(operator) >= map.get(String.valueOf(c))) {
+                            if (map.get(operator) >= map.get(String.valueOf(c))) {//与上个操作符进行优先级比较，因为优先级的运算符是作用于优先于其前一个字符的，所以若优先级高则先计算该运算符
                                 int a = integerStack.pop();
                                 int b = integerStack.pop();
                                 int result = auxiliary.caculate(b, a, operator);

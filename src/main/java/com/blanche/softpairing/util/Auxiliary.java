@@ -161,7 +161,7 @@ public class Auxiliary {
         return properFraction;
     }
 
-    public int caculate(int a, int b, String operator) {
+    public int caculate(int a, int b, String operator) {//计算两个整数
         char operatorChar = operator.charAt(0);
         int result = 0;
         switch (operatorChar) {

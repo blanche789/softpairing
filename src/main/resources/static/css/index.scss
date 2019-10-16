@@ -1,12 +1,19 @@
-body {}
+.content.hide {
+    display: none;
+}
+
+.second.hide {
+    display: none;
+}
 
 .content {
     text-align: center;
     margin-top: 100px;
 
+
     .txt {
         display: block;
-        font-size: 2em;
+        font-size: 1em;
         margin-block-start: 0.67em;
         margin-block-end: 0.67em;
         margin-inline-start: 0px;
@@ -47,5 +54,196 @@ body {}
             text-decoration: none;
         }
     }
+
+}
+
+#subject {
+    .chart {
+        width: 600px;
+        margin: 0 auto;
+
+        a {
+            color: #fff;
+            width: 174px;
+            height: 48px;
+            border-radius: 24px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 48px;
+            background-color: #0080ff;
+            text-decoration: none;
+            position: fixed;
+            bottom: 80px;
+            left: 30px;
+        }
+    }
+
+    .manifest {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+
+        tr {
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+
+            input {
+                width: 90px;
+                padding: 2px 2px;
+            }
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            color: #fff;
+            background-color: #0080ff;
+
+            padding: 8px 8px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 8px 8px;
+        }
+
+        .twice {
+            border: none;
+        }
+
+        .twice th {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+
+}
+
+#answer {
+    .chart {
+        width: 600px;
+        margin: 0 auto;
+
+    }
+
+    .manifest {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+
+        tr {
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            color: #fff;
+            background-color: #0080ff;
+
+            padding: 8px 8px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 8px 8px;
+        }
+
+        .twice {
+            border: none;
+        }
+
+        .twice th {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+
+#function {
+    .download {
+        margin-top: 100px;
+        margin-left: 200px;
+        width: 174px;
+        height: 48px;
+        border-radius: 24px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 48px;
+        background-color: #0080ff;
+        text-decoration: none;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    border-top: 1px solid #ccc;
+    width: 98vw;
+    display: flex;
+
+    >div {
+        flex: 1;
+        text-align: center;
+    }
+
+    >div.active {
+        background-color: #0080ff;
+        // background: #ffd400;
+        // -webkit-box-shadow: 0px 8px 48px 0px rgba(255, 212, 0, 0.4);
+        box-shadow: 0px 8px 48px 0px rgba(255, 212, 0, 0.4);
+        color: black;
+    }
+
+    span {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .subject {
+        background: url("../imge/subject.png") center center no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: contain;
+        margin-top: 10px;
+
+    }
+
+    .answer {
+        background: url("../imge/answer.png") center center no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: contain;
+        margin-top: 10px;
+
+    }
+
+    .function {
+        background: url("../imge/function.png") center center no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: contain;
+        margin-top: 10px;
+
+    }
+
 
 }

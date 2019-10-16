@@ -18,39 +18,20 @@ public class SoftpairingApplicationTests {
 
     @Test
     public void contextLoads() {
-//        int result;
-//        for (int i = 0; i < 1000; i++) {
-////            result = (int)(1*Math.random()+1);
-//            result = Math.random() >= 0.5 ? 1 : 0;
-//            System.out.println(result);
-//            String str = "test";
-//          String test =   str + result;
-//        }
-//        System.out.println(5%10);
-//        Generate generate = new Generate();
-//        List<String> list = generate.genericQuestion(100, 20);
-//        for (int i = 0; i < list.size(); i++) {
-//            System.out.println(list.get(i));
-//        }
-//        Auxiliary commonDivisor = new Auxiliary();
-//        int divisor = commonDivisor.commonDivisor(5, 20);
-//        System.out.println(divisor);
-//        Auxiliary auxiliary = new Auxiliary();
-//        String s = auxiliary.properFraction(7, 5);
-//        System.out.println(s);
         Command command = new Command();
-        command.setQuestionNum(10);
+        command.setQuestionNum(10000);
         command.setNumericalRange(7);
         ExerciseController exerciseController = new ExerciseController();
         List<Exercise> generate = exerciseController.generate(command);
+        long start = System.currentTimeMillis();
         for (Exercise exercise : generate) {
             System.out.println( exercise.getExercise() + exercise.getAnswer());
         }
-//        Generate generate1 = new Generate();
-//        for (int i = 0; i < 100; i++) {
-//            String s = generate1.generateInterger(1, 6);
-//            System.out.println(s);
-//        }
+        long end = System.currentTimeMillis();
+        long time = end - start;
+
+        System.out.println("生成10000道题目时间：" +String.valueOf(time) + "ms");
+
     }
 
 }
